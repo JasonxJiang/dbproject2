@@ -4,6 +4,7 @@
   <title>Your organization</title>
   <meta charset='UTF-8' />
   <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Marvel" rel="stylesheet">
 
 
   <link href='style.css' rel='stylesheet' type='text/css' />
@@ -16,12 +17,17 @@
   <script id="earthquake-template" type="text/x-handlebars-template">
   	{{#features}}
   	<div class="earthquake-box">
-  		<h2>Location {{properties.place}}</h2>
-  		<h3>Coordinates</h3>
+  		<h2 class="location">Location {{properties.place}}</h2>
+  		<h4>Details:</h4>
+  		<div>
+  			{{properties.detail}}
+  		</div>
   	</div>
+  	<hr>
   	{{/features}}
   </script>
   <script src='script.js'></script>
+  <button type="button" class="btn btn-default">Reload Content</button>
   <div class="earthquake-content"></div>
 </body>
 </html>
