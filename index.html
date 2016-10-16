@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <title>Your organization</title>
+  <meta charset='UTF-8' />
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
+
+
+  <link href='style.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+  <!-- Put your HTML here! -->
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <script id="earthquake-template" type="text/x-handlebars-template">
+  	{{#features}}
+  	<div class="earthquake-box">
+  		<h2>Location {{properties.place}}</h2>
+  		<h3>Coordinates</h3>
+  	</div>
+  	{{/features}}
+  </script>
+  <script src='script.js'></script>
+  <div class="earthquake-content"></div>
+</body>
+</html>
