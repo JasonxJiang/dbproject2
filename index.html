@@ -18,9 +18,14 @@
   	{{#features}}
   	<div class="earthquake-box">
   		<h2 class="location">Location {{properties.place}}</h2>
-  		<h4>Details:</h4>
-  		<div>
-  			{{properties.detail}}
+  		<h4 class ="details">Details:</h4>
+  		<div class = "longLat">
+
+                        Longitude: {{geometry.coordinates.[0]}}<br>
+                        Latitude: {{geometry.coordinates.[1]}}<br>
+                        Magnitude: {{properties.mag}}<br>
+                        <br>More info: {{properties.detail}}<br>
+
   		</div>
   	</div>
   	<hr>
